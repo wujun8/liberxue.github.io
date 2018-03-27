@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://gems.ruby-china.org/
   specs:
     activesupport (4.2.7)
       i18n (~> 0.7)
@@ -169,7 +169,7 @@ GEM
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
     octokit (4.6.2)
-      sawyer (~> 0.8.0, >= 0.5.3)
+      sawyer (>= 0.5.3, ~> 0.8.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
@@ -196,6 +196,3 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-
-BUNDLED WITH
-   1.10.6

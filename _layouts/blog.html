@@ -10,7 +10,7 @@
 <body class="" gtools_scp_screen_capture_injected="true">
 <header id="header" class="header bg-white">
     <div class="navbar-container">
-      <a href="/?liberxue" title="访问 {{site.title }}" class="navbar-logo"> <img src="{{ site.url }}/style/images/logo-liberxue.png" alt="{{ site.title }}"> </a>
+      <a href="/?self" title="访问 {{site.title }}" class="navbar-logo"> <img src="{{ site.url }}/style/images/logo-liberxue.png" alt="{{ site.title }}"> </a>
         <div class="navbar-menu">
             {% for link in site.links %}             
             <a href="{% unless link.external %}{{ site.url }}{% endunless %}{{ link.url }}">{{ link.name }}</a>
@@ -99,27 +99,27 @@
 </p>
 {{ content }}
 		<p class="post-info">
-			本文由 <a href="/">liberxue</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>最后编辑时间为:{{ page.date | date: "%F %H:%M:%S"}}</p>
+			本文由 <a href="/">Winston</a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>最后编辑时间为:{{ page.date | date: "%F %H:%M:%S"}}</p>
 	</div>
+
+    <div id="gitment"></div>
 </article>
 
-<!-- <div class="related-post-lists">
-	<div class="post-lists">
-		<div class="post-lists-body">
-					<div class="post-list-item">
-				<div class="post-list-item-container">
-					<div class="item-label">
-						<div class="item-title"><a href="induction.html">归纳的随想</a></div>
-						<div class="item-meta clearfix">
-														<div class="item-meta-ico bg-ico-image" style="background: url('../usr/themes/pinghsu/images/bg-ico.png') no-repeat;background-size: 40px auto;"></div>
-	                        							<div class="item-meta-cat"><a href="../category/thoughts/index.html">Thoughts</a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-				</div>
-	</div>
-</div> -->
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: '{{ page.id }}', // 可选。默认为 location.href
+        owner: 'wujun8',
+        repo: 'wujun8.github.io',
+        oauth: {
+            client_id: '6e0573eab0b553f9fc31',
+            client_secret: '3694a38ae6f7927b52e3f2fd3c3cf46bcd25dba0',
+        },
+    })
+    gitment.render('gitment')
+</script>
+
 {% include foot.html %}
 <!--liberxueconnnet-menu-->
 <div id="directory-content" class="directory-content">
